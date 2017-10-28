@@ -5,6 +5,7 @@ use think\Request;
 use app\index\model\User as UserModel;
 use think\Session;
 use think\Db;
+
 class User extends Base
 {
     public function login()

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="__STATIC__/lib/layui/css/layui.css"> 
+    <script src="__STATIC__/lib/layui/layui.js"></script>
+    <script src="__STATIC__/js/my.js"></script>   
+</head>
+<body>
+        <div class="layui-item">
+            <label class="layui-form-label">中文版</label>
+        <div class="layui-input-inline">
+            <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+        </div>
+
+        <div class="layui-item">
+                <label class="layui-form-label">年选择器</label>
+        <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="test2" placeholder="yyyy-MM-dd">
+        </div>
+
+        <div class="layui-item">
+                <label class="layui-form-label">年月选择器</label>
+        <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="test3" placeholder="yyyy-MM-dd">
+        </div>
+        <div class="layui-item">
+                <label class="layui-form-label">时间选择器</label>
+        <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="test4" placeholder="yyyy-MM-dd">
+        </div>
+        <div class="layui-item">
+                <label class="layui-form-label">时间选择器</label>
+        <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="test5" placeholder="yyyy-MM-dd">
+        </div>
+    <script>
+        
+        layui.use('laydate', function(){
+
+            var laydate = layui.laydate;
+
+            laydate.render({
+                elem:'#test1', //指定元素
+                type:'date',    //日期选择器，默认可不选
+                show:true,
+                done:function(value){
+                        console.log(value);
+                    }
+            });
+            laydate.render({
+                elem:'#test2', //指定元素
+                type:'year'
+            })
+
+            laydate.render({
+                elem:'#test3', //指定元素
+                type:'month'
+            });
+            laydate.render({
+                elem:'#test4', //指定元素
+                type:'time'
+            });
+            laydate.render({
+                elem:'#test5', //指定元素
+                type:'datetime'
+            })
+        });
+        
+    </script>
+</body>
+</html>
